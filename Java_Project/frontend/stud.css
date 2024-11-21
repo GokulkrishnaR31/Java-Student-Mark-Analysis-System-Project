@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('college.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;/* Prevents scrolling */
+    color: #fff;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.75); /* Dark transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    text-align: center;
+    transform: translateZ(0);
+    transition: transform 0.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.5em;
+    background: linear-gradient(to right, #f3043b, #f51d8c);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    animation: colorChange 3s infinite alternate;
+    position: relative;
+}
+
+h1:before, h1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(243, 4, 59, 0.5);
+    animation: pulse 2s infinite;
+}
+
+h2 {
+    color: #f8f9fa;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.input-section, .output-section, .report-section, .comparison-section {
+    margin-top: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f8f9fa;
+    font-size: 1.1em;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 10px rgba(118, 75, 162, 0.5);
+    background: rgba(255, 255, 255, 1);
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1.1em;
+    transform: translateZ(0);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.1);
+}
+
+#chart {
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+#report, #comparison {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    from {
+        background: linear-gradient(to right, #f3043b, #f51d8c);
+    }
+    to {
+        background: linear-gradient(to right, #df0d88, #8f44db);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(243, 4, 59, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(243, 4, 59, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(243, 4, 59, 0.5);
+    }
+}

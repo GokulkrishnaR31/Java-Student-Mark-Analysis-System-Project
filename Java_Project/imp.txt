@@ -1,0 +1,22 @@
+javac -cp .;json-20240303.jar StartServer.java StudentMarkAnalysis.java
+
+
+javac -cp backend/lib/json-20240303.jar -d backend backend/StartServer.java backend/StudentMarkAnalysis.java
+
+
+
+
+java -cp backend;backend/lib/json-20240303.jar StartServer
+
+
+imp
+
+1.
+
+javac -cp backend/lib/json-20240303.jar -d backend backend/StartServer.java backend/StudentMarkAnalysis.java
+
+
+2.
+
+java -cp backend;backend/lib/json-20240303.jar StartServer
+c
